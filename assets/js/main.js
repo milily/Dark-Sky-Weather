@@ -1,16 +1,13 @@
 $(document).ready(function(){
 
-	$(function(){
-		ubicacion();
-	})
-
-
 	function ubicacion(){
+		console.log("asd")
 	    if(navigator.geolocation){
-	        navigator.geolocation.getCurrentPosition(found, notFound);
+	        navigator.geolocation.getCurrentPosition(found);
 	    }
 	}
-	//window.addEventListener("load", ubicacion);
+
+	window.addEventListener("load", function(){ console.log("asd")});
 
 	var lat, lon;
 	var found = function(posicion){
