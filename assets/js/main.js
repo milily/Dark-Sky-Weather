@@ -30,8 +30,18 @@ $(document).ready(function(){
 	            data: { 'limit':'833'},
 	            
 	        })
-	        .done( function(datos){
-	        	console.log(datos.minutely.data);
+	        .done( function(data){
+	        	console.log(data.minutely.data);
+	        	
+	        	$('.prediccion').append('<img src="dist/iconos/'+data.currently.icon+'.png">');
+           
+        })
+        .fail(function() {
+            console.log('Error al conectar a la Api')
+        })
+        .always(function() {
+            console.log('Completado')
+
 	        })
 	}
 
