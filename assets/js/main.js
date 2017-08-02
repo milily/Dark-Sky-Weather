@@ -7,7 +7,9 @@ $(document).ready(function(){
 	    }
 	}
 
-	window.addEventListener("load", function(){ console.log("asd")});
+	window.addEventListener("load", function(){
+		 console.log("No carga, no funciona, no pasa náh")
+	});
 
 	var lat, lon;
 	var found = function(posicion){
@@ -33,7 +35,7 @@ $(document).ready(function(){
 	        .done( function(data){
 	        	console.log(data.minutely.data);
 	        	
-		        	$('.prediccion').append(`<div>
+		        	$('.prediccion').append(`<div class="currently">
 			        							<img src="dist/iconos/`+data.currently.icon+`.png">`+
 								            	`<h1 class="temp center-align">`+ data.currently.apparentTemperature+`</h1>`+
 								            	`<h5 class="center-align">Wind: `+data.currently.windSpeed+`</h5>`+
