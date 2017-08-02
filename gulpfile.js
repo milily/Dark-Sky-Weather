@@ -11,7 +11,7 @@ gulp.task('script', function(){
 		.pipe(gulp.dest('dist/js/'));	
 });
 
-gulp.task('style', function(){
+gulp.task('bases', function(){
 	gulp.src(['node_modules/bootstrap/dist/css/bootstrap.css', 'assets/sass/main.scss'])
 		.pipe(sass().on('error', sass.logError))
 		.pipe(minifyCSS())
@@ -30,7 +30,7 @@ gulp.task('webserver', function(){
 });
 
 gulp.task('watch', function() {
-    gulp.watch('assets/sass/*.scss', ['style']);
+    gulp.watch('assets/sass/*.scss', ['bases']);
 });
 
-gulp.task('default', ['script', 'style', 'webserver', 'watch']);
+gulp.task('default', ['script', 'bases', 'webserver', 'watch']);

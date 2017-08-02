@@ -1,0 +1,24 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.container{
+	background-image: url("../../dist/img/playa2.jpg");
+	background-attachment : fixed;
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+	height:638px;
+
+	div{
+		div{
+			.boton{
+				background-color: #2ecc71;
+				border-color: #2ecc71;
+				color: whitesmoke;
+				font-family: 'Roboto', sans-serif;
+			}
+		}
+	}
+}
