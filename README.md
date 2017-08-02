@@ -11,8 +11,8 @@ El proyecto fue realizado con las siguientes dependencias NPM:
   - Gulp-Uglify `~v.2.0.0`
 
 + Dependencias de Producción 
-  - jQuery `~v.3.1.1`
-  - Materialize `~v.0.97.8`
+  - jQuery `~v.3.2.1`
+  - Bootstrap `~v3.3.7`
 
 ### Levantamiento ambiente de desarrollo
 
