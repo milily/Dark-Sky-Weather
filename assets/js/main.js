@@ -33,14 +33,21 @@ $(document).ready(function(){
 	        .done( function(data){
 	        	console.log(data.minutely.data);
 	        	
-	        	$('.prediccion').append('<img src="dist/iconos/'+data.currently.icon+'.png">');
+		        	$('.prediccion').append(`<div>
+			        							<img src="dist/iconos/`+data.currently.icon+`.png">`+
+								            	`<h1 class="temp center-align">`+ data.currently.apparentTemperature+`</h1>`+
+								            	`<h5 class="center-align">Wind: `+data.currently.windSpeed+`</h5>`+
+								            	`<h5 class="center-align">Humidity: `+data.currently.humidity+`</h5>`+
+								            	`<h5 class="center-align">UV Index: `+data.currently.uvIndex+`</h5>`+
+								            	`<h5 class="center-align">Pressure: `+data.currently.pressure+`</h5>
+								            </div>`);
            
         })
         .fail(function() {
-            console.log('Error al conectar a la Api')
+            console.log('Error con la petición a la Api')
         })
         .always(function() {
-            console.log('Completado')
+            console.log('listo')
 
 	        })
 	}
